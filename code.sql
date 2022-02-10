@@ -67,6 +67,20 @@ order by total desc
 
 
 
+
+#các hàm trong sql
+SELECT SUM(quantity)
+FROM orderDetails;
+
+SELECT AVG(price)
+FROM products;
+
+SELECT COUNT(id)
+FROM products;
+
+
+
+
 #Thực hành 1:
 
 select productCode, productName, buyprice, quantityInStock
@@ -86,6 +100,7 @@ where productLine = 'Classic Cars'
    or productVendor = 'Min Lin Diecast'
 
 
+
     #[Thực hành] Truy vấn dữ liệu từ nhiều bảng
 select customers.customerNumber, customerName, phone, paymentDate, amount
 from customers
@@ -101,6 +116,7 @@ from customers
 select customers.customerNumber, customers.customerName, orders.orderNumber, orders.status
 from customers LEFT JOIN orders on customers.customerNumber = orders.customerNumber
 where orderNumber is null
+
 
 
     #[Thực hành] Câu lệnh GROUP BY
